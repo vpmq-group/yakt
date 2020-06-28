@@ -1,11 +1,11 @@
-package com.vpmq.yakt.config;
+package com.vpmq.yakt.core.config;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.kafka.clients.admin.Admin;
 import org.apache.kafka.clients.admin.AdminClient;
 import org.apache.kafka.clients.admin.AdminClientConfig;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.kafka.core.KafkaAdmin;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -18,5 +18,10 @@ public class CommonConfiguration {
         Map<String, Object> configs = new HashMap<>();
         configs.put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
         return AdminClient.create(configs);
+    }
+
+    @Bean
+    public ObjectMapper jsonObjectMapper() {
+        return new ObjectMapper();
     }
 }
