@@ -13,6 +13,13 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Yet Another Kafka Tool</name>
 	<description>coooooool</description>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>yakt-core</module>
+		<module>yakt-msg-parser-plugin-api</module>
+		<module>yakt-ui</module>
+	</modules>
 
 	<properties>
 		<java.version>11</java.version>
@@ -45,14 +52,5 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
 
 </project>
