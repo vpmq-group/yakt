@@ -1,14 +1,21 @@
 package com.vpmq.yakt.core.model;
 
-import org.springframework.stereotype.Component;
-
 import java.util.Map;
 
-@Component
 public class KafkaConnection {
+
+    private String id;
     private String name;
     private String description;
     private Map<String, Object> properties;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -18,7 +25,6 @@ public class KafkaConnection {
         this.name = name;
     }
 
-
     public Map<String, Object> getProperties() {
         return properties;
     }
@@ -27,7 +33,6 @@ public class KafkaConnection {
         this.properties = properties;
     }
 
-
     public String getDescription() {
         return description;
     }
@@ -35,7 +40,6 @@ public class KafkaConnection {
     public void setDescription(String description) {
         this.description = description;
     }
-
 
 //    private Admin kafkaAdmin;
 //

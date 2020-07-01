@@ -10,17 +10,18 @@ import java.io.File;
 
 @SpringBootTest
 public class ConnectionsManagerTests {
+
     @Autowired
     private SystemVariables vars;
 
     @Test
-    public void configFolderTest(){
+    public void configFolderTest() {
         String configFolder = vars.getConfigFolder();
         System.out.println("configFolder =" + configFolder);
     }
 
     @Test
-    public void connectionFilePath(){
+    public void connectionFilePath() {
         String connectionFile = vars.getConnectionFilePath();
         System.out.println("connection File =" + connectionFile);
         Assertions.assertTrue(new File(connectionFile).exists());
