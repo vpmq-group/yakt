@@ -8,6 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 public class SystemVariablesTest {
+
     @Autowired
     private SystemVariables vars;
 

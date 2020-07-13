@@ -12,12 +12,12 @@ import java.io.IOException;
 @Component
 public class ConnectionsManager {
 
-    private final ObjectMapper jsonObjectMapper;
+    private final ObjectMapper json;
     private final SystemVariables vars;
 
     @Autowired
-    public ConnectionsManager(ObjectMapper jsonObjectMapper, SystemVariables vars) {
-        this.jsonObjectMapper = jsonObjectMapper;
+    public ConnectionsManager(ObjectMapper json, SystemVariables vars) {
+        this.json = json;
         this.vars = vars;
     }
 
@@ -25,7 +25,6 @@ public class ConnectionsManager {
     private void init() throws IOException {
         new File(vars.getConfigFolder()).mkdirs();
         new File(vars.getConnectionFilePath()).createNewFile();
-
     }
 
 }
